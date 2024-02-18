@@ -1,4 +1,4 @@
-class Utils {
+class Time {
 
   constructor() {
     this.deltaTimestamp;
@@ -21,4 +21,4 @@ class Utils {
 
 }
 
-export default Utils
+export default Time

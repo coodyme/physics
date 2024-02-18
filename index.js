@@ -5,34 +5,42 @@ import Time from './time.js';
 let canvas;
 let context;
 
-window.onload = main()
+let rect = {
+  x: 100,
+  y: 50,
+  width: 200,
+  height: 175
+}
+
+window.onload = start()
 
 function start() {
   canvas = document.getElementById('canvas');
   context = canvas.getContext('2d');
 
   // Start the first frame request
-  window.requestAnimationFrame(update);
+  window.requestAnimationFrame(loop);
 }
 
 function update(timestamp) {
-  draw();
-
-  let deltaTime = Time.deltaTime(timestamp);
-  let fps = Time.fps(deltaTime);
-  console.log(deltaTime, fps)
-
-  window.requestAnimationFrame(update);
+  rect.x += (100 * Time.deltaTime(timestamp));
+  rect.y += (100 * Time.deltaTime(timestamp));
 }
 
 function draw() {
-  let randomColor = Math.random() > 0.5 ? '#ff8080' : '#0099b0';
-  context.fillStyle = randomColor;
-  context.fillRect(100, 50, 200, 175);
+  context.clearRect(0, 0, canvas.width, canvas.height);
+
+  context.fillStyle = 'black';
+  context.fillRect(rect.x, rect.y, rect.width, rect.height);
 }
 
-function main() {
-  start();
+function loop(timestamp) {
+  update(timestamp)
+  draw(timestamp);
+
+  window.requestAnimationFrame(loop);
 }
+
+
 
 

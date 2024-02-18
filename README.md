@@ -37,7 +37,8 @@ The `requestAnimationFrame` function tells the browser that we want to update th
 
 The timestamp argument that is passed to the `update` function is the current time in milliseconds. We can use this timestamp to calculate the time that has passed since the last frame, and use this information to update the game state.
 
-## Calculate the display FPS
+### Calculate the display FPS
 
 We can calculate the display FPS by measuring the time that has passed since the last frame in `milliseconds` and using this information to calculate the frame rate. We can then use this frame rate to update the game state and render the game at a consistent rate.
 
+###  

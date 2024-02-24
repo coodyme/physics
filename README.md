@@ -41,4 +41,33 @@ The timestamp argument that is passed to the `update` function is the current ti
 
 We can calculate the display FPS by measuring the time that has passed since the last frame in `milliseconds` and using this information to calculate the frame rate. We can then use this frame rate to update the game state and render the game at a consistent rate.
 
-###  
+### Game Objects
+
+We can create game objects by defining a class for each type of game object. Each game object can have its own properties and methods. These entities can be updated and rendered independently of the other game objects.
+
+For example, we can define a base class for game objects that has properties for position, velocity, and acceleration, and methods for updating and rendering the game object.
+
+```javascript
+class GameObject {
+    constructor() {
+        // ...
+    }
+}
+```
+
+Then we can create a subclass for each type of game object, such as the player, enemies, and projectiles.
+
+```javascript
+class Player extends GameObject {
+    constructor() {
+        super();
+        // ...
+    }
+
+    // ...
+}
+```
+
+### Collision detection
+
+

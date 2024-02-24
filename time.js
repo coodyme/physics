@@ -1,4 +1,4 @@
-class Time {
+export default class Time {
   constructor() {
     this.deltaTimestamp;
     this.lastTimestamp;
@@ -25,5 +25,3 @@ class Time {
   }
 
 }
-
-export default Time

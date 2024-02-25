@@ -5,5 +5,7 @@ export default class GameObject {
     this.y = y;
     this.vx = vx;
     this.vy = vy
+
+    this.collinding = false;
   }
 }

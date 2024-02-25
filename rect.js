@@ -4,12 +4,12 @@ export default class Rect extends GameObject {
   constructor(context, x, y, vx, vy) {
     super(context, x, y, vx, vy);
 
-    this.width = 100;
-    this.height = 100;
+    this.width = 10;
+    this.height = 10;
   }
 
   draw() {
-    this.context.fillStyle = 'black';
+    this.context.fillStyle = this.collinding ? 'red' : 'black';
     this.context.fillRect(this.x, this.y, this.width, this.height);
   }
 
